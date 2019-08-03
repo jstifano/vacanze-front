@@ -73,8 +73,9 @@ export class TravelComponent implements OnInit {
           text: 'El viaje se modificó satisfactoriamente.',
           type: 'success'
         });
-        await delay(1000);
-        window.location.reload()
+        setTimeout(function(){
+          window.location.reload();
+        }, 1000)
       },
       (fail) => {
         Swal.fire({
