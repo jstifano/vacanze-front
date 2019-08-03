@@ -12,9 +12,9 @@ import { Travel } from '../../../classes/travel';
 })
 export class CitiesTravelComponent implements OnInit {
 
-  private cities: any;
+  public cities: any;
   aux:string;
-  private travel: Travel = JSON.parse(localStorage.getItem("travel"));
+  public travel: Travel = JSON.parse(localStorage.getItem("travel"));
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute, private apiService: ApiService) { }
 

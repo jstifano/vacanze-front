@@ -15,6 +15,7 @@ import { LocalStorageService } from '../../../../services/local-storage.service'
 
 export class AddReservationTravelComponent {
 
+  public type: any;
   @Output() spread = new EventEmitter();
   @Input('activeId') typeReservation: string;
   activeModal: NgbModalRef;

@@ -1,18 +1,17 @@
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {FlightReservationsComponent} from './flight-reservations.component';
-import {FlightReservationsRoutingModule} from './flight-reservations-routing.module';
+import { FlightReservationsComponent } from './flight-reservations.component';
+import { FlightReservationsRoutingModule } from './flight-reservations-routing.module';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from '../../../services/api.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {ListReservationsComponent} from '../list-reservations/list-reservations.component';
+import { ListReservationsModule } from '../list-reservations/list-reservations.module';
 
 @NgModule({
   declarations: [
-    FlightReservationsComponent,
-    ListReservationsComponent
+    FlightReservationsComponent
   ],
   imports: [
     FlightReservationsRoutingModule,
@@ -21,7 +20,8 @@ import {ListReservationsComponent} from '../list-reservations/list-reservations.
     NgbModule,
     FormsModule,
     SweetAlert2Module.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ListReservationsModule
   ],
   providers: [ApiService],
   

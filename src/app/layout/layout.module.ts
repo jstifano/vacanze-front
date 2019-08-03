@@ -6,17 +6,14 @@ import { CommonModule } from "@angular/common";
 import { LayoutRoutingModule } from "./layout-routing.module";
 import { LayoutComponent } from "./layout.component";
 import { HeaderComponent } from "./header/header.component";
-import { SidebarComponent } from "./sidebar/sidebar.component";
 import { NgbModalModule } from "@ng-bootstrap/ng-bootstrap";
 import {RegisterUserModule} from "../components/users/register-user/register-user.module";
-
-
+import { SidebarModule } from './sidebar/sidebar.module';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     HeaderComponent,
-    SidebarComponent
   ],
   imports: [
     HttpClientModule,
@@ -27,8 +24,8 @@ import {RegisterUserModule} from "../components/users/register-user/register-use
     NgbModalModule,
     FormsModule,
     ReactiveFormsModule,
-    SweetAlert2Module.forRoot()
-
+    SweetAlert2Module.forRoot(),
+    SidebarModule
   ]
 })
 export class LayoutModule { }

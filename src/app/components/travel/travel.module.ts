@@ -12,6 +12,7 @@ import { CitiesTravelComponent } from './cities-travel/cities-travel.component';
 import { AddCityComponent } from './cities-travel/add-city/add-city';
 import { DiaryTravelComponent } from './diary-travel/diary-travel.component';
 import { AddReservationTravelComponent } from './detail-travel/add-reservation/add-reservation';
+import { DetalleComponent } from './detalle/detalle';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AddReservationTravelComponent } from './detail-travel/add-reservation/a
     CitiesTravelComponent,
     AddCityComponent,
     DiaryTravelComponent,
-    AddReservationTravelComponent
+    AddReservationTravelComponent,
+    DetalleComponent
   ],
   imports: [
     CommonModule,

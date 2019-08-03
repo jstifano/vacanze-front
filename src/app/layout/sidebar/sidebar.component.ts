@@ -1,8 +1,8 @@
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { Component, Output, EventEmitter, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
-import {LocalStorageService} from "../../services/local-storage.service";
-import {Roles} from "../../classes/roles";
+import { LocalStorageService } from "../../services/local-storage.service";
+import { Roles } from "../../classes/roles";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-sidebar",

@@ -106,7 +106,7 @@ export class GrupoOncePagoComponent implements OnInit {
   public idSelectRes: string;
   public idSelectCru: string;
 
-  private orderList: Array<Order>;
+  public orderList: Array<Order>;
   public payMethods: Array<PayMethods>;
   public bill: Bill;
   public idMethod: string;

@@ -1,14 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h3>{{travel.name}}</h3>
+      <h3>{{travel?.name}}</h3>
     </div>
     <div class="col-2">
       <button class="btn btn-secondary" routerLink="/travel">Regresar</button>
     </div>
   </div>
   <div class="row ml-2">
-    <h5>{{travel.description}}</h5>
+    <h5>{{travel?.description}}</h5>
   </div>
   <hr>
   <div class="row">
@@ -16,7 +16,7 @@
     <div class="col-auto mb-3" *ngFor="let city of cities; let id = index">
       <div class="card text-center" style="width: 18rem;">
         <div class="card-body" (click)="travelDetails(city.id)">
-          <h5>{{city.city}}</h5>
+          <h5>{{city?.city}}</h5>
           <div class="row align-items-center">
             <!--<div class="col-10" (click)="travelDetails(city.id)">
               <h5>{{city.city}}</h5>
@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="card-footer text-muted" style="text-align: center" (click)="travelDetails(city.id)">
-          {{city.country}}
+          {{city?.country}}
         </div>
       </div>
     </div>

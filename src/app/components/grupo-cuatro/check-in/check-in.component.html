@@ -103,9 +103,9 @@
                   <input type="text" class="form-control" placeholder="Numero De Pasaporte">
                 </div>
 
-                <swal #addSwal2 title="Buscado con los Campos Ingresados" type="success" showConfirmButton=false
+                <!-- <swal #addSwal2 title="Buscado con los Campos Ingresados" type="success" showConfirmButton=false
                   timer=2500>
-                </swal>
+                </swal> -->
                 <button (click)="listadoEquipaje()" class="btn btn-success float-right button-search">Buscar</button>
 
               </div>
@@ -212,26 +212,19 @@
               </tr>
             </thead>
             <tbody>
-
-              <!-- <tr *ngFor="let baggage of baggages; let indice=index"> -->
-              <!-- <th scope="row">{{indice+1}}</th>
-                      <td >{{baggage.id}}</td>
-                      <td>{{baggage._pasaporte }}</td>
-                      <td>{{baggage._description}}</td>
-                      <td>{{baggage._status}}</td> -->
-              <tr>
-                <th scope="row">1</th>
-                <td>XSY-219</td>
-                <td>Aeropuerto</td>
-                <td>002345678910</td>
-                <td>Abierto</td>
+              <tr *ngFor="let baggage of baggages; let indice=index">
+                <th scope="row">{{indice+1}}</th>
+                <td >{{baggage?.id}}</td>
+                <td>{{baggage?._pasaporte }}</td>
+                <td>{{baggage?._description}}</td>
+                <td>{{baggage?._status}}</td>
                 <td>
                   <button (click)="open(content, 
-                        baggage.id, baggage._pasaporte, baggage._description)"><i class="fa fa-edit"></i></button>
-                  <swal #deleteSwal title="¿Desea Eliminar el Equipaje?" type="question" [showCancelButton]="true"
-                    [focusCancel]="true" (confirm)="deleteBaggage(baggage.id)"
+                        baggage?.id, baggage?._pasaporte, baggage?._description)"><i class="fa fa-edit"></i></button>
+                  <!-- <swal #deleteSwal title="¿Desea Eliminar el Equipaje?" type="question" [showCancelButton]="true"
+                    [focusCancel]="true" (confirm)="deleteBaggage(baggage?.id)"
                     [options]="{ confirmButtonText: 'Si, estoy seguro', cancelButtonText: 'Cancelar'  }">
-                  </swal>
+                  </swal> -->
                   <button class="button-delete" [swal]="deleteSwal"><i class="fa fa-trash"></i></button>
                 </td>
               </tr>

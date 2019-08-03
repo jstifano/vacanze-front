@@ -24,5 +24,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     GrupoTresRoutingModule
   ],
   providers: []
+  
 })
 export class GrupoTresModule { }

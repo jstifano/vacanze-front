@@ -14,8 +14,10 @@ import { Travel } from '../../../classes/travel';
 })
 export class DetailTravelComponent implements OnInit {
 
-  private travel: Travel = JSON.parse(localStorage.getItem("travel"));
-  private cityId: string = this.activatedRoute.snapshot.paramMap.get("cityId");
+  public travel: Travel = JSON.parse(localStorage.getItem("travel"));
+  public cityId: string = this.activatedRoute.snapshot.paramMap.get("cityId");
+
+  public selectedTab: any;
   activeModal: NgbModalRef;
   commentForm: FormGroup;
   @Input('travelId') travelId: number;

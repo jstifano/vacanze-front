@@ -4,8 +4,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ApiService } from '../../../services/api.service';
 import { Baggage } from "../../../classes/baggage";
 import { environment as url } from '../../../../environments/environment';
-import Swal from 'sweetalert2';
-import { SweetAlertOptions } from 'sweetalert2';
+import Swal, { SweetAlertOptions } from 'sweetalert2';
 
 @Component({
   selector: 'app-check-in',
@@ -16,7 +15,7 @@ export class CheckInComponent implements OnInit {
 
   public formGroup: FormGroup;
   public closeResult: string;
-  public baggage: Baggage[] = [];
+  public baggages: Baggage[] = [];
 
   //Elementos del put
   public idPut: any;
@@ -33,7 +32,7 @@ export class CheckInComponent implements OnInit {
 
   ngOnInit() {
     this.pagina = document.getElementById('paginaCliente');
-    this.service.getUrl(url.endpoint.default._get.getBaggage, ['0']).then(data => { this.baggage = data; })
+    this.service.getUrl(url.endpoint.default._get.getBaggage, ['0']).then(data => { this.baggages = data; })
 
     this.formGroup = new FormGroup({
       pasaporte: new FormControl(null, [Validators.required]),
@@ -64,7 +63,7 @@ export class CheckInComponent implements OnInit {
   }
 
   getBaggage() {
-    this.service.getUrl(url.endpoint.default._get.getBaggage, ['0']).then(data => { this.baggage = data; console.log(data) });
+    this.service.getUrl(url.endpoint.default._get.getBaggage, ['0']).then(data => { this.baggages = data; console.log(data) });
   }
 
   postBaggege() {

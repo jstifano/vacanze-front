@@ -14,8 +14,8 @@ import { delay } from 'q';
 })
 export class TravelComponent implements OnInit {
 
-  private userId: string;
-  private travels: Array<Travel>;
+  public userId: string;
+  public travels: Array<Travel>;
   aux:string ;
   constructor(private router: Router, private apiService: ApiService, private localStorage: LocalStorageService) {
   }
@@ -24,7 +24,7 @@ export class TravelComponent implements OnInit {
     this.getTravels();
   }
 
-  private getTravels() {
+  public getTravels() {
     this.localStorage.getItem("id").subscribe(data => {
       if (data) {
         this.userId = data
