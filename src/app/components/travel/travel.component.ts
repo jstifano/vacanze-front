@@ -4,7 +4,6 @@ import { ApiService } from '../../services/api.service';
 import Swal from 'sweetalert2';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { Travel } from '../../classes/travel';
-import { delay } from 'q';
 
 @Component({
   selector: 'app-travel',
