@@ -12,35 +12,6 @@
       <i class="fa fa-fw fa-map"></i>&nbsp;
       <span>Landing Page</span>
     </a>
-    <a routerLink="/grupo-nueve" class="list-group-item">
-      <i class="fa fa-fw fa-briefcase"></i>&nbsp;
-      <span>Reclamo de Equipajes</span>
-    </a>
-    <div class="nested-menu">
-        <a class="list-group-item" (click)="addExpandClass('paginas')">
-            <i class="fa fa-dashboard"></i>&nbsp;
-            <span>Automoviles</span>
-        </a>
-        <li class="nested" [class.expand]="showMenu === 'paginas'">
-            <ul class="submenu">
-                <li>
-                    <a routerLink="/grupo-cinco/brand" [routerLinkActive]="['router-link-active']" class="list-group-item">
-                      <span>Marcas</span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="/grupo-cinco/model" [routerLinkActive]="['router-link-active']" class="list-group-item">
-                      <span>Modelos</span>
-                    </a>
-                </li>
-                <li>
-                    <a routerLink="/grupo-cinco/fleet" [routerLinkActive]="['router-link-active']" class="list-group-item">
-                      <span>Flota</span>
-                    </a>
-                </li>
-            </ul>
-        </li>
-    </div>
     <div class="nested-menu">
       <a class="list-group-item" (click)="addExpandClass('pages')">
         <i class="fa fa-plus"></i>&nbsp;
@@ -73,22 +44,6 @@
       <i class="fa fa-fw fa-cutlery"></i>&nbsp;
       <span>Restaurantes</span>
     </a>
-    <a routerLink="/flight-reservations" class="list-group-item">
-      <i class="fa fa-plane" aria-hidden="true"></i>&nbsp;
-      <span>Reservar Vuelo</span>
-    </a>
-    <a routerLink="/grupo-trece/automovil" class="list-group-item">
-      <i class="fa fa-car"></i>&nbsp;
-      <span>Reservar Automóvil</span>
-    </a>
-    <a routerLink="/grupo-trece/habitacion" class="list-group-item">
-      <i class="fa fa-bed"></i>&nbsp;
-      <span>Reservar Habitación</span>
-    </a>
-    <a routerLink="/restaurant-reservation" [routerLinkActive]="['router-link-active']" class="list-group-item">
-      <i class="fa fa-cutlery"></i>&nbsp;
-      <span>Reservar Restaurant</span>
-    </a>
     <a routerLink="/mis-reservas" class="list-group-item">
       <i class="fa fa-pencil-square-o"></i>&nbsp;
       <span>Mis Reservas</span>
@@ -105,32 +60,6 @@
       <i class="fa fa-fw fa-shopping-cart"></i>&nbsp;
       <span>Pagos</span>
     </a>
-    <a routerLink="/grupo-cuatro/check-in" [routerLinkActive]="['router-link-active']" class="list-group-item">
-      <i class="fa fa-fw fa-suitcase "></i>&nbsp;
-      <span>Check In y Equipaje</span>
-    </a>
-    <div class="nested-menu">
-      <a class="list-group-item" (click)="addExpandClass('pages')">
-        <i class="fa fa-fw fa-ticket"></i>&nbsp;
-        <span>Venta de Boletos</span>
-      </a>
-      <li class="nested" [class.expand]="showMenu === 'pages'">
-        <ul class="submenu">
-          <li>
-            <a routerLink="/grupo-cuatro/ticket-sale-flight" class="list-group-item">
-              <i class="fa fa-fw fa-compass"></i>&nbsp;
-              <span>Boleto Aereo</span>
-            </a>
-          </li>
-          <li>
-            <a routerLink="/grupo-cuatro/ticket-sale-ship" class="list-group-item">
-              <i class="fa fa-fw fa-ship"></i>&nbsp;
-              <span>Boletos Cruceros</span>
-            </a>
-          </li>
-        </ul>
-      </li>
-    </div>
   </div>
 
 </nav>
